@@ -220,3 +220,114 @@
 
 // console.log(add(b, c));
 //outcome: 15
+
+////////////////////////SCOPE//////////////////////////////
+// global scope 
+// variables declared outside of any function or block
+// available pretty much everywhere
+// often risky if overused because global variables can be modified from anywhere which can lead to naming collisions or unexpected behavior
+
+// var globalVariable = "I am a global variable";
+
+// function showGlobal() {
+//   console.log(globalVariable);
+// }
+
+// showGlobal();
+// console.log(globalVariable);
+
+// function scope 
+// variables declared with var inside of a function 
+// only available within that specific function - cannot be accessed outside of the function
+// great for encapsulating logic and avoiding naming collisions
+
+// function testScope() {
+//   var functionVar = "I am inside a function";
+//   console.log(functionVar);
+// }
+
+// testScope();
+
+// console.log(functionVar);
+
+
+// block scope 
+// variables declared with let or const inside of a block ({}) 
+// only available within that specific block
+// can be if, loops, or any code wrapped in a {}
+
+// if (true) {
+//   let blockVar = 'I am block scoped';
+//   const blockConst = 10;
+//   console.log(blockVar);
+//   console.log(blockConst);
+// }
+
+// console.log(blockVar);
+// console.log(blockConst);
+
+
+////////////////////////HOISTING//////////////////////////////
+
+// asynchronous:
+// console.log("Step 1");
+
+// setTimeout(() => {
+//   console.log("Step 2");
+// }, 2000);
+
+// console.log("Step 3");
+
+// function doHeavyCalculation() {
+//   let sum = 0;
+//   for (let i = 0; i < 1e9; i++) {
+//     sum += i;
+//   }
+//   return sum;
+// }
+
+// console.log("Start calculation...");
+// console.log(doHeavyCalculation()); // synchronous & blocking
+// console.log("End calculation.");
+
+// function testScope() {
+//   if (true) {
+//     var a = "Using Var";
+//     let b = "Using Let";
+//     const c = "Using Const";
+//   }
+//   console.log(a);
+//   console.log(b); //undfined because it is not defined outside of block(block scope)
+//   console.log(c); //undfined because it is not defined outside of block(block scope)
+// }
+
+// testScope();
+
+
+// // console.log(greeting);
+// let greeting = "Hello im practicing hoisting";
+
+// // console.log(message);
+// const message = "I am confused";
+
+// //cannot access because they are being declared AFTER they are called
+
+// console.log(greeting);
+// console.log(message);
+
+// console.log(greeting); 
+// //hoisted not initialized = undefined
+// var greeting = "Hello im practicing hoisting";
+// console.log(greeting);
+
+// greet();
+// function greet () {
+//   console.log("Hi");
+// }
+//function declaration = fully hoisted
+
+greet();
+var greet = function () {
+  console.log("Hi");
+};
+
