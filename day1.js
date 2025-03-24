@@ -162,9 +162,61 @@
 // console.log(person);
 
 //////////////////////comparisson operators//////////////////////////////
-console.log(10 > 5);  // true
-console.log(10 < 5);  // false
-console.log(10 == "10"); // true (checks only value) loose equality
-console.log(10 === "10"); // false (checks value & type) strict equality
-console.log(10 !== 5); // true, opposit of ===
-console.log(10 != 5); // true, opposit of ==
+// console.log(10 > 5);  // true
+// console.log(10 < 5);  // false
+// console.log(10 == "10"); // true (checks only value) loose equality
+// console.log(10 === "10"); // false (checks value & type) strict equality
+// console.log(10 !== 5); // true, opposit of ===
+// console.log(10 != 5); // true, opposit of ==
+
+
+////////////////////////logical operators//////////////////////////////
+// console.log(true && false); // false (AND)
+// console.log(true || false); // true (OR)
+// console.log(!true); // false (NOT)
+
+////////////////////////functions//////////////////////////////
+// basic
+// function greet(name) {
+//   return "Hello, " + name + "!";
+// }
+
+// console.log(greet("Charles"));
+
+//arrow
+// const greet = (name) => {
+//   return "Hello " + name + "!";
+// };
+
+// console.log(greet("Damen"));
+////////////////////////exercise 2//////////////////////////////
+
+// sayHi = function greet(name) {
+//   return "Hi " + name + " :)";
+// }
+
+// console.log(sayHi("Tracee"));
+//outcome: Hi Tracee :)
+
+// const greet = (name) => {
+//   return "Hi " + name + " :)";
+// }
+// console.log(greet("Tracee"));
+//outcome: Hi Tracee :)
+
+// const b = 10
+// const c = 5
+
+// function add(x, y) {
+//   return x + y;
+// }
+
+// console.log(add(b, c));
+//outcome: 15
+
+// const add = (a, b) => {
+//   return a + b;
+// }
+
+// console.log(add(b, c));
+//outcome: 15
