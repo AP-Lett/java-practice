@@ -375,14 +375,14 @@
 
 const fetchUser = async () => {
   try {
-    const response = await fetch('https://api.github.com/users/charleysan')
+    const response = await fetch('https://api.github.com/users/AP-Lett')
 
     if (!response.ok) {
       throw new Error(`HTTP error. Status: ${response.status}`)
     }
 
     const userData = await response.json();
-    console.log(`${userData.name} has ${userData.public_repos} public GitHub repos!`);
+    console.log(`${userData.login} has ${userData.public_repos} public GitHub repos!`);
 
     console.log(userData);
 
@@ -394,35 +394,35 @@ const fetchUser = async () => {
 fetchUser();
 
 
-function fetchUserData(userId) {
-  // Return a new Promise
-  return new Promise((resolve, reject) => {
-    // Use fetch (built-in in modern browsers, Node 18+, or via polyfill)
-    fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
-      .then((response) => {
-        if (!response.ok) {
-          // If we get an HTTP error (e.g., 404), reject with an error
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        // Otherwise, parse and return JSON data
-        return response.json();
-      })
-      .then((data) => {
-        // Resolve the Promise with the fetched user data
-        resolve(data);
-      })
-      .catch((error) => {
-        // Reject the Promise if any error occurs
-        reject(error);
-      });
-  });
-}
+// function fetchUserData(userId) {
+//   // Return a new Promise
+//   return new Promise((resolve, reject) => {
+//     // Use fetch (built-in in modern browsers, Node 18+, or via polyfill)
+//     fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+//       .then((response) => {
+//         if (!response.ok) {
+//           // If we get an HTTP error (e.g., 404), reject with an error
+//           throw new Error(`HTTP error! Status: ${response.status}`);
+//         }
+//         // Otherwise, parse and return JSON data
+//         return response.json();
+//       })
+//       .then((data) => {
+//         // Resolve the Promise with the fetched user data
+//         resolve(data);
+//       })
+//       .catch((error) => {
+//         // Reject the Promise if any error occurs
+//         reject(error);
+//       });
+//   });
+// }
 
-// How to use this function:
-fetchUserData(1)
-  .then((user) => {
-    console.log('User data:', user);
-  })
-  .catch((err) => {
-    console.error('Error fetching user:', err);
-  });
+// // How to use this function:
+// fetchUserData(1)
+//   .then((user) => {
+//     console.log('User data:', user);
+//   })
+//   .catch((err) => {
+//     console.error('Error fetching user:', err);
+//   });
