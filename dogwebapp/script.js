@@ -36,6 +36,6 @@ fetchButton.addEventListener('click', async () => {
     console.log('Error', error);
   } finally {
     fetchButton.disabled = false;
-    fetchButton.textContent = 'Generate Doxie!';
+    fetchButton.textContent = 'Generate a new Doxie!';
   }
 });
