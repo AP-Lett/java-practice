@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Random Dachshund Images</title>
+    <style>
+      body { text-align: center; font-family: fantasy; }
+      button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+      img { max-width: 500px; margin-top: 20px; }
+      #training-level { font-style: italic; margin-top: 10px; }
+    </style>
+  </head>
+
+  <body>
+    <h1>Dachshund Dashboard</h1>
+
+    <button id="fetch-button">Generate Doxie!</button>
+
+    <div>
+      <img id="dog-image">
+      <br>
+      <span id="dog-name"></span>
+      <br>
+      <span id="training-level"></span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
